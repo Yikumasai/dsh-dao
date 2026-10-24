@@ -1,0 +1,16 @@
+{
+  "id": "dsh-external/dsh-dao",
+  "version": "1.0.0",
+  "main": "./lib/index.js",
+  "description": "道Agent · 反者道之动 · 弱者道之用 — DeepSeek Harness 提示词反代与本源观照面板",
+  "engines": {
+    "dsh": ">=0.2.1-rc.2"
+  },
+  "contributes": {
+    "tools": [],
+    "skills": []
+  },
+  "client": {
+    "main": "./client.js"
+  }
+}

@@ -1,0 +1,11 @@
+# dsh-dao bundle patch
+#
+# Mounted automatically when installed via:
+#   dsh plugin --profile web add dsh-dao
+#
+# Double-mount guard avoids duplicate route registrations when an aggregate
+# bundle or manual patch already mounts dsh-dao.
+- insert:
+    - id: dsh-dao
+      name: 'dsh-dao'
+      disabled: !!js "[...ctx.loader.entries()].some((e) => e.options.name === 'dsh-dao' && e.options.id !== 'dsh-dao' && !e.disabled)"
